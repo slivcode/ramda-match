@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- 6
+deploy:
+  provider: npm
+  email: sliv.phone@gmail.com
+  api_key:
+    secure: i4jYq8IirGrQPKURxcwtSkIYTGdl2yzVbJD9XJ7TwSN7D636jgW5iEEfw2Df3H/TaWyIwQ5xAH8SvwVWY6SLEfo/c2esRbdWYth/+RPAeRRUYciqxATc8h3N1GC29NZKH4G/B262O97QkK3GfEi2qyFFYt7mvyfuPqFZzbm48k26/AOH+Imq8tZfv2kHEtSs3ZkLukeA6yNcnrU7u3tPwfy8h6gIw+3O2I4qoMAllL7mbz6v52ZbG6MaeIdljmv9BtT3UkBCxCIAfn+xoC7fLN63TwQZUwpUkGuILuo13ksVYPxij3xiRk4OXwfiJA//OvZPCYgSufv91iJfOp0QYtaFmkrt8Ent0M9p3ExfDyAH/Rn61hCIkrm5YJ1FW2E1ZV7cqYUUteYPYAKjOmcgSQZsAIe7t+exbu9arP4c6wR6vFhrvU8ofSQDKdRZEvdZ99mwWjvNK/DqkgkCDn3DFXqIgtu/R0y5RTJQMr3+A1YbVcTtVTLfoS9JX/h69boQKSq0RMdkt4iT3U1alorP4uf21/FZrfAlbL+b49jAL3h8GzRlGtu02HWLPiH1EqFplar0YyyJUEwAK1IgVR4D589QONEqo8Ln4j8y40CNcmly/6H7K/dqakdIwXqcYnSwyl/wN+d4o61KZt0X4U4C5LN/OlzfuaBGZE7YewjYU58=
+  on:
+    tags: true
+    repo: slivcode/ramda-match

@@ -1,0 +1,29 @@
+{
+  "name": "ramda-match",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -d --outDir lib",
+    "test": "npm run build && node lib/index.test.js",
+    "clean": "rm -rf lib"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "ramda",
+    "functional"
+  ],
+  "author": {
+    "name": "sliv",
+    "email": "sliv.mbp@gmail.com"
+  },
+  "license": "MIT",
+  "readme": "ERROR: No README data found!",
+  "devDependencies": {
+    "typescript": "^2.3.4"
+  }
+}
