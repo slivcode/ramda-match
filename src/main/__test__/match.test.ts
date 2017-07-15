@@ -46,3 +46,12 @@ test('switcher harness test', () => {
   });
   expect(f1).toBeCalled();
 });
+
+test.only('matchHarness curry test', () => {
+  const m = matchHarness<string>(m => {
+    m(1)('one');
+    m(2, 'two');
+  });
+  expect(m(1)).toEqual('one');
+  expect(m(2)).toEqual('two');
+});

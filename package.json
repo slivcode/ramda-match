@@ -18,10 +18,10 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepack": "tsc -d --outDir lib",
-    "build": "tsc -d --outDir lib",
     "clean": "rm -rf lib",
-    "test": "npm run build && jest lib"
+    "compile": "tsc -d --outDir lib",
+    "prepack": "npm run compile",
+    "dev": "jest --no-watchman --watch src/"
   },
   "devDependencies": {
     "typescript": "^2.3.4"

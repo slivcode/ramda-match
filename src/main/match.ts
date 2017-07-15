@@ -35,7 +35,10 @@ export const match: Matcher = function match (set, cmpFn = is.shallowEqual) {
 export function createHarness (handler) {
   return (fn, cmpFn = is.shallowEqual) => {
     const matchSets = [];
-    fn((k, v) => matchSets.push([k, v]));
+    fn((k, v) => {
+      if (v === undefined) return (iv) => matchSets.push([k, iv]);
+      return matchSets.push([k, v]);
+    });
     return handler(matchSets, cmpFn);
   };
 }

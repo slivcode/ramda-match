@@ -6,6 +6,10 @@ export namespace RamdaMatch {
   export type CmpFn = (x, y) => boolean;
 
   export interface MatchFn<A = any> {
+    (pred: Pred): {
+      (handle: Resolver<A>): void
+    };
+
     (pred: Pred, handle: Resolver<A>): void;
   }
 
