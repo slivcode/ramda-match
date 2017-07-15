@@ -1,29 +1,41 @@
 {
   "name": "ramda-match",
   "version": "0.0.2",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "build": "tsc -d --outDir lib",
-    "test": "npm run build && node lib/index.test.js",
-    "clean": "rm -rf lib"
-  },
-  "files": [
-    "lib/index.js",
-    "lib/index.d.ts",
-    "README.md"
-  ],
   "keywords": [
-    "ramda",
-    "functional"
+    "functional",
+    "ramda"
   ],
+  "license": "MIT",
   "author": {
     "name": "sliv",
     "email": "sliv.mbp@gmail.com"
   },
-  "license": "MIT",
-  "readme": "ERROR: No README data found!",
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prepack": "tsc -d --outDir lib",
+    "build": "tsc -d --outDir lib",
+    "clean": "rm -rf lib",
+    "test": "npm run build && jest lib"
+  },
   "devDependencies": {
     "typescript": "^2.3.4"
-  }
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "/g/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "readme": "ERROR: No README data found!"
 }
